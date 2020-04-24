@@ -8,13 +8,6 @@
 
 import UIKit
 
-struct Product {
-    let title: String
-    let description: String
-    let actionTitle: String
-    let productImage: String
-}
-
 class ViewController: UIViewController {
 
     private var heightConstraint: NSLayoutConstraint?
@@ -37,16 +30,11 @@ class ViewController: UIViewController {
         ])
         heightConstraint = constraints.last
 
-        let ipad = Product(
-            title: "iPad Pro 12.9\"",
-            description: "It’s a magical piece of glass. It’s so fast most PC laptops can’t catch up. It has pro cameras that can transform reality. And you can use it with touch, pencil, keyboard, and now trackpad. It’s the new iPad Pro.",
-            actionTitle: "Read More",
-            productImage: "ipad-12-9"
-        )
-        update(using: ipad)
+        let model = Product.ipad
+        update(using: model)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            let size = CardView.dimensions(bounds: self.view.bounds, model: ipad)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            let size = CardView.dimensions(bounds: self.view.bounds, model: model)
             self.heightConstraint?.constant = size.height
             self.view.layoutIfNeeded()
         }

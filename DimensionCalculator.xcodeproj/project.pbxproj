@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25BBEDD62451598F00722142 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBEDD42451589500722142 /* Units.swift */; };
 		25BBEDD8245159C600722142 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBEDD7245159C600722142 /* UIView+Layout.swift */; };
+		25CF2E242452AA4100C57622 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CF2E232452AA4100C57622 /* Models.swift */; };
 		25E83675244CF1B0004E6F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E83674244CF1B0004E6F8B /* AppDelegate.swift */; };
 		25E83677244CF1B0004E6F8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E83676244CF1B0004E6F8B /* SceneDelegate.swift */; };
 		25E83679244CF1B0004E6F8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E83678244CF1B0004E6F8B /* ViewController.swift */; };
@@ -31,8 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2548F1472452ADDE004EFF10 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		25BBEDD42451589500722142 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		25BBEDD7245159C600722142 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		25CF2E232452AA4100C57622 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		25E83671244CF1B0004E6F8B /* DimensionCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DimensionCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E83674244CF1B0004E6F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E83676244CF1B0004E6F8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +69,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25CF2E1E2452A98100C57622 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				25BBEDD42451589500722142 /* Units.swift */,
+				25BBEDD7245159C600722142 /* UIView+Layout.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		25CF2E1F2452A98D00C57622 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				25E83674244CF1B0004E6F8B /* AppDelegate.swift */,
+				25E83676244CF1B0004E6F8B /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		25CF2E202452A9A800C57622 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				25E83678244CF1B0004E6F8B /* ViewController.swift */,
+				25E8367A244CF1B0004E6F8B /* Main.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		25CF2E222452AA2B00C57622 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25CF2E232452AA4100C57622 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		25CF2E252452AB2100C57622 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				25E8367D244CF1B4004E6F8B /* Assets.xcassets */,
+				25E8367F244CF1B4004E6F8B /* LaunchScreen.storyboard */,
+				25E83682244CF1B4004E6F8B /* Info.plist */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
 		25E83668244CF1B0004E6F8B = {
 			isa = PBXGroup;
 			children = (
+				2548F1472452ADDE004EFF10 /* README.md */,
 				25E83673244CF1B0004E6F8B /* DimensionCalculator */,
 				25E8368A244CF1B4004E6F8B /* DimensionCalculatorTests */,
 				25E83672244CF1B0004E6F8B /* Products */,
@@ -87,17 +136,13 @@
 		25E83673244CF1B0004E6F8B /* DimensionCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				25CF2E252452AB2100C57622 /* Supporting */,
+				25CF2E222452AA2B00C57622 /* Models */,
+				25CF2E202452A9A800C57622 /* ViewControllers */,
+				25CF2E1F2452A98D00C57622 /* AppDelegates */,
+				25CF2E1E2452A98100C57622 /* Utils */,
 				25E83698244D1615004E6F8B /* Views */,
 				25E83696244CF1EA004E6F8B /* DimensionCalculator.swift */,
-				25BBEDD42451589500722142 /* Units.swift */,
-				25BBEDD7245159C600722142 /* UIView+Layout.swift */,
-				25E83674244CF1B0004E6F8B /* AppDelegate.swift */,
-				25E83676244CF1B0004E6F8B /* SceneDelegate.swift */,
-				25E83678244CF1B0004E6F8B /* ViewController.swift */,
-				25E8367A244CF1B0004E6F8B /* Main.storyboard */,
-				25E8367D244CF1B4004E6F8B /* Assets.xcassets */,
-				25E8367F244CF1B4004E6F8B /* LaunchScreen.storyboard */,
-				25E83682244CF1B4004E6F8B /* Info.plist */,
 			);
 			path = DimensionCalculator;
 			sourceTree = "<group>";
@@ -223,6 +268,7 @@
 				25E83697244CF1EA004E6F8B /* DimensionCalculator.swift in Sources */,
 				25BBEDD62451598F00722142 /* Units.swift in Sources */,
 				25E83679244CF1B0004E6F8B /* ViewController.swift in Sources */,
+				25CF2E242452AA4100C57622 /* Models.swift in Sources */,
 				25E83675244CF1B0004E6F8B /* AppDelegate.swift in Sources */,
 				25E83677244CF1B0004E6F8B /* SceneDelegate.swift in Sources */,
 				25BBEDD8245159C600722142 /* UIView+Layout.swift in Sources */,
