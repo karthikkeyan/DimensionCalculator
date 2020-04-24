@@ -73,3 +73,62 @@ func cardDimension(for module: Product, bounds: CGRect) -> CGSize {
     return calculator.dimensions
 }
 ```
+
+## APIs
+
+Initialize the struct with how you want to constraint the size calculation using one the below enums,
+
+```swift
+public enum SizeConstraint {
+    // This will allow the width and height to grow, 
+    // except the width will not outgrow the given value  
+    case maximumWidth(CGFloat)
+    
+    // This will allow the width and height to grow, 
+    // except the hight will not outgrow the given value
+    case maximumHeight(CGFloat)
+    
+    // This will allow the height to grow with fixed with regardless of the content's height width
+    case fixedWidth(CGFloat)
+    
+    // This will allow the height to grow with fixed with regardless of the content's width
+    case fixedHeight(CGFloat)
+}
+```
+
+Below are the apis `DimensionCalculator` provides at least for now. 
+
+```swift
+func add(height: CGFloat)
+
+func add(width: CGFloat)
+
+func add(size: CGSize)
+
+func add(rect: CGRect)
+
+func add(height: NSLayoutConstraint)
+
+func add(width: NSLayoutConstraint)
+
+func add(stack: UIStackView)
+
+func add(heights: [CGFloat], spacing: CGFloat = 0)
+
+func add(widths: [CGFloat], spacing: CGFloat = 0)
+
+func add(text: String, font: UIFont)
+
+func add(text: NSAttributedString)
+
+func add(texts: [String: UIFont], spacing: CGFloat)
+
+func add(texts: [NSAttributedString], spacing: CGFloat)
+
+func add(insets: UIEdgeInsets)
+
+func add(directionalInsets: NSDirectionalEdgeInsets)
+```
+
+
+> Note: The code is at the early stages, so it is still under development, this apis are likley to change. Please give me your valuable inputs if you find this useful. 
